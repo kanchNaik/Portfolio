@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"> Aishwarya Thorat</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"> Aishwarya Thorat</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile-pic.jpg" alt="Aishwarya Thorat Profile Picture" style="border-radius: 50%;">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h2 class="title">Aishwarya Thorat</h1>
+            <p class="section__text__p2">Data Scientist</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/Aishwarya_Thorat_Resume.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Info
+                </button>
+            </div>
+
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/aishwaryathorat/'"/>
+
+                <img src="./assets/github.png" alt="My Github Profile" class="icon" 
+                onclick="location.href='https://github.com/aishwaryagulabthorat'"/>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <p class="section__text__p1">Get to know more</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.jpg"
+                alt="Profile Picture"
+                class="about-pic"/>
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" 
+                        alt="Experience Icon"
+                        class="icon"/>
+                        <h3>Experience</h3> 
+                        <p>3+ years <br/> Data Scientist</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" 
+                        alt="Education Icon"
+                        class="icon"/>
+                        <h3>Education</h3> 
+                        <p>Masters in <br/> Applied Data Science</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        I am Aishwarya Thorat, a Master’s student in Data Analytics at San José State University, with a robust foundation in AI/ML and over four years of industry experience across media, retail, and pricing analytics. I’ve designed and deployed scalable machine learning solutions, predictive models, and real-time data pipelines using Python, PySpark, and cloud platforms like AWS and GCP. My passion lies at the intersection of AI, automation, and innovation—recently leading me to an upcoming AI Internship at Contentstack, where I will contribute to building intelligent agentic systems. I thrive on turning complex data into actionable insights and meaningful user experiences, whether through fraud detection algorithms, price optimization models, or persona-driven chatbots. With a deep commitment to technical excellence and continuous learning, I bring both a creative mindset and a results-oriented approach to every project I undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <img src="./assets/arrow.png" alt="Arrow Icon"
+        class="icon arrow" 
+        onclick="location.href='./#experience'"/>
+    </section>
+
+    <section id="experience">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-containers">
+                    
+                    <div class="article-container">
+                        <article>
+                            <div class="experience-sub-title-container">
+                                <h2 class="experience-sub-title">Senior Data Scientist</h2>
+                                <img src="./assets/magic9_logo.jpeg" alt="Experience Icon"
+                                class="icon_logo"/>
+                            </div>
+                            <div>
+                                <!-- <h2>Senior Data Scientist at</h2> -->
+                                <h3>Magic9 Media and Analytics - 09/2021 to 01/2024</h3>
+                                    <ul>
+                                        <li>Promoted from Data Scientist to Senior Data Scientist within one year.</li>
+                                        <li>Led multiple projects analyzing media viewership trends using <strong>Python </strong> (pandas, NumPy), seaborn, matplotlib, Tableau, and Power BI.</li>
+                                        <li>Built an algorithm to <strong>detect fraudulent viewership</strong> patterns by TV channels attempting to inflate ratings.</li>
+                                        <li>Developed <strong>predictive models</strong> using <strong>scikit-learn</strong> to forecast viewership trends and detect anomalies.</li>
+                                        <li>Applied <strong> K-Means clustering</strong> to segment the day into dayparts and built models for each segment to <strong> detect fraud.</strong></li>
+                                        <li>Used <strong> Isolation Forest</strong> with bootstrapping to identify and treat outliers in viewership data.</li>
+                                        <li>Automated <strong> data pipeline </strong> using Apache Airflow to extract data from Amazon S3 and load into SQL Server.</li>
+                                        <li>Conducted in-depth data analysis to uncover patterns and address concerns related to channel ratings.</li>
+                                    </ul>
+                            </div>
+                        </article>
+                        <br>
+                        <article>
+                            <div class="experience-sub-title-container">
+                                <h2 class="experience-sub-title">Application Developer</h2>
+                                <img src="./assets/mdlz_logo.png" alt="Experience Icon"
+                                class="icon_logo"/> 
+                            </div>
+                            <div>
+                                <!-- <h2>Senior Data Scientist at</h2> -->
+                                <h3>Mondelez International - 01/2021 to 09/2021</h3>
+                                    <ul>
+                                        <li>Built <strong> ETL pipelines</strong> to process large business datasets, cutting processing time by 40%.</li>
+                                        <li>Created data workflow solutions using <strong> QuickBase</strong> and <strong> Power Apps.</strong></li>
+                                        <li>Automated data extraction and transformation, improving accuracy and reducing manual work.</li>
+                                    </ul>
+                            </div>
+                        </article>
+                        <br>
+                        <article>
+                            <div class="experience-sub-title-container"> 
+                                <h2 class="experience-sub-title">Junior Data Scientist</h2>
+                                <img src="./assets/sciative_logo.png" alt="Experience Icon"
+                                class="icon_logo"/>
+                            </div>
+
+                            <div>
+                                <!-- <h2>Senior Data Scientist at</h2> -->
+                                <h3>Sciative Solutions - 06/2019 to 12/2020</h3>
+                                    <ul>
+                                        <li>Built <strong> multiple linear regression </strong> models to predict appliance prices using sales data, product features, and competitor pricing.</li>
+                                        <li>Developed <strong> logistic regression </strong> models to predict repeat purchases, improving customer targeting by 15%.</li>
+                                        <li>Designed and implemented scalable backend solutions, supporting a 50% boost in online sales during peak seasons.</li>
+                                        <li>Processed large-scale data using <strong> PySpark</strong> in <strong> Azure Databricks </strong> for real-time insights.</li>
+                                        <li>Created <strong> complex SQL queries and stored procedures </strong> to analyze product sales and recommend pricing strategies.</li>
+                                        <li>Used <strong>Advanced Excel and SQL</strong> to detect trends and anomalies in sales data, optimizing business decisions.</li>
+                                    </ul>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" 
+        alt="Arrow Icon"
+        class="icon arrow" 
+        onclick="location.href='./#projects'"/>
+    </section>
+
+
+
+    <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card" onclick="openModal('modal1')"> 
+            <img src="./assets/medvqa.png" alt="Med-VQA Project" class="project-img"> 
+            <h3 class="project-title">Med-VQA: Medical Visual QA</h3> 
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" onclick="openModal('modal2')">
+            <img src="./assets/chatbot.jpg" alt="Chatbot with Personality" class="project-img">
+            <h3 class="project-title">Chatbot with Personality</h3>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" onclick="openModal('modal3')">
+            <img src="./assets/agentic_ai.png.webp" alt="Agentic AI System" class="project-img">
+            <h3 class="project-title">Agentic AI: Full-Stack Code Builder</h3>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" onclick="openModal('modal4')">
+            <img src="./assets/AWS_pipeline.jpg" alt="Sentiment Analysis on Yelp Reviews" class="project-img">
+            <h3 class="project-title">Sentiment Analysis on Yelp</h3>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" onclick="openModal('modal5')">
+            <img src="./assets/ride.png" alt="Uber Ride App" class="project-img">
+            <h3 class="project-title">Ride Management System</h3>
+        </div>
+
+        <!-- Project 6 --> 
+         <div class="project-card" onclick="openModal('modal6')"> 
+            <img src="./assets/senti_gan.jpg" alt="NLP and GAN Project" class="project-img"> 
+            <h3 class="project-title">NLP + GAN: Sentiment & Medical Image Gen</h3> 
+        </div>
+    </div>
+
+    <!-- Modal Structure (One for each project) -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Med-VQA: Multimodal Medical Visual Question Answering</h2> 
+            <p>A research project exploring Medical Visual Question Answering (VQA) using a LoRA fine-tuned LLaVA-Med model and OpenAI model integrated with multimodal Retrieval-Augmented Generation (RAG) and advanced prompting strategies (Few-Shot, Chain-of-Thought, Tree-of-Thought) to enhance accuracy and explainability. 
+                The system retrieves relevant visual (X-rays/MRIs) and textual (PubMedQA, SLAKE, PMC-VQA) data to generate informed answers with strong visual-language reasoning capabilities.
+            </p> 
+            <br>
+            <ul> 
+                <li><strong>Overview:</strong> System that answers medical questions from X-rays/MRIs using visual + textual retrieval.</li> 
+                <li><strong>Techniques:</strong> Prompting (Few-Shot, CoT, ToT), RAG with PubMedQA, SLAKE, PMC-VQA</li> 
+                <li><strong>Fine-tuning:</strong> Lightweight LoRA-tuned LLaVA-Med</li> 
+                <li><strong>Performance:</strong> CoT/ToT Recall: 77%, LoRA Accuracy: 54.27%, RAG Recall: 71.83%</li> 
+                <li><strong>Technologies:</strong> Python, PyTorch, FAISS, CLIP, MiniLM, GPT-4 API, LLaVA-Med</li> 
+                <li><strong>Features:</strong> Explainability, Visual + Text reasoning, Few-shot & zero-shot inference</li> 
+            </ul> 
+            <a href="./assets/MedVQA_Final_Project_Report.pdf" target="_blank">📄 View Full Report</a> 
+        </div>
+    </div>
+
+
+    <div id="modal2" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeModal('modal2')">&times;</span> 
+            <h2>Chatbot with Personality</h2>
+            <p> A Retrieval-Augmented Generation (RAG) based chatbot designed to mimic the speaking styles of famous personalities like Elon Musk, Morgan Freeman, and David Attenborough. 
+                Combines semantic retrieval, personality tagging, and stylistic prompting to produce engaging, in-character conversations. 
+            </p> 
+            <br>
+            <ul> 
+                <li><strong>Goal:</strong> Simulate personality-driven Q&A using real-world interviews, books, and podcasts</li> 
+                <li><strong>Data Pipeline:</strong> Speech-to-text (Whisper), Speaker Labeling (Gemini), Q&A generation, metadata tagging (tone, emotion, situation, style)</li> 
+                <li><strong>Retrieval:</strong> Sentence-BERT (MiniLM) embeddings stored in FAISS for fast, semantic vector search</li> 
+                <li><strong>Response Generation:</strong> Gemini, GPT-4, or LLaMA generate final responses based on context & persona</li> 
+                <li><strong>Deployment:</strong> Streamlit + Google Cloud + Cloud Functions for scalable chatbot serving</li> 
+                <li><strong>Results:</strong> Avg. human-rated personality alignment scores: Elon (4.7), Freeman (4.46), Attenborough (4.1)</li> 
+            </ul> 
+            <a href="./assets/ChatBot-With-Personality.pdf" target="_blank">📄 View Final Report (PDF)</a> 
+            <!-- <a href="https://github.com/leoncorreia/persona-chatbot" target="_blank">🌐 GitHub Repository</a>  -->
+        </div> 
+    </div>
+
+
+    <div id="modal3" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeModal('modal3')">&times;</span> 
+            <h2>Agentic AI: Multi-Agent Code Generation System</h2> 
+            <p> A modular, agent-based AI architecture designed to convert natural language requests into validated frontend + backend code using API documentation and retrieval-augmented generation (RAG). 
+                Built to simulate intelligent coordination among agents and support iterative feedback loops. 
+            </p> 
+            <br>
+            <ul> 
+                <li><strong>Key Agents:</strong> Instruction Parser, Retriever (RAG), Code Generator, Code Validator, Feedback Handler, Conversation State Manager</li> 
+                <li><strong>RAG Setup:</strong> Uses BGE-small-en for embedding API docs (from CSV), stored in FAISS + metadata dictionary</li> 
+                <li><strong>Code Generator:</strong> Combines user intent, subtasks, and retrieved API docs to generate full-stack code using GPT-4 (or Mistral/LLaMA)</li> 
+                <li><strong>Validation Layer:</strong> Syntax check, linting, API match, and security screening before user delivery</li> 
+                <li><strong>Feedback Loop:</strong> User rejection triggers dynamic re-prompting using stored session history, enhancing regeneration accuracy</li> 
+                <li><strong>Tech Stack:</strong> Python, FAISS, Sentence-BERT, BeautifulSoup, Playwright, GPT-4, Mistral, Pydantic</li> 
+            </ul> 
+            <a href="./assets/Initial Architecture and Plan.pdf" target="_blank">📄 Architecture Summary (DOCX)</a> 
+        </div> 
+    </div>
+
+
+    <div id="modal4" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeModal('modal4')">&times;</span> 
+            <h2>Real-Time Sentiment Analysis on Yelp Dataset</h2> 
+            <p> A scalable pipeline for processing and sentiment analysis of Yelp reviews using hybrid architecture — combining Apache Spark, Kafka, and AWS services. </p> 
+            <br>
+            <ul> 
+                <li><strong>Streaming Stack:</strong> Yelp API → Kafka → Spark Streaming → AWS S3 → Glue (ETL)</li> 
+                <li><strong>Batch Architecture:</strong> Transformed data analyzed via Athena SQL & visualized in QuickSight</li> 
+                <li><strong>ML Models:</strong> Logistic Regression + TF-IDF, BERT, LIME for Explainable AI</li> 
+                <li><strong>Algorithms:</strong> Reservoir Sampling, Bloom Filters, DGIM, Locality Sensitive Hashing</li> 
+                <li><strong>Privacy Techniques:</strong> K-Anonymity & Differential Privacy over review data</li> 
+                <li><strong>Performance:</strong> 79% sentiment accuracy using Logistic Regression (SageMaker)</li> 
+                <li><strong>Tools:</strong> AWS S3, Glue, Athena, SageMaker, Spark, Kafka, Tableau, OpenAI API</li> 
+            </ul> 
+            <a href="./assets/Bigdata_finalReport.pdf" target="_blank">📄 View Final Report (PDF)</a> 
+        </div> 
+    </div>
+
+    <!-- Modal for Project 5 --> 
+     <div id="modal5" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeModal('modal5')">&times;</span> 
+            <h2>Ride Management System – Uber Simulation</h2> 
+            <p> A full-stack distributed ride management system inspired by Uber. 
+                Built using microservices architecture with integrated ML-based dynamic pricing, real-time notifications, and secure admin monitoring. 
+            </p> 
+            <br>
+            <ul> 
+                <li><strong>Frontend:</strong> ReactJS dashboards for customer, driver, and admin roles</li> 
+                <li><strong>Backend:</strong> Django REST microservices containerized with Docker & orchestrated with Kubernetes</li> 
+                <li><strong>ML Integration:</strong> XGBoost model for dynamic fare prediction (R² = 0.79)</li> 
+                <li><strong>Real-Time Communication:</strong> Redis-backed WebSocket for booking status, driver availability</li> 
+                <li><strong>Event Streaming:</strong> Kafka used for messaging across services (ride events, location updates)</li> 
+                <li><strong>Caching:</strong> Redis used for driver location and session caching to reduce DB load</li> 
+                <li><strong>Testing:</strong> JMeter used for performance testing (100 concurrent users simulated)</li> 
+                <li><strong>Deployment:</strong> Hosted on AWS EKS with persistent MySQL, Redis, and media storage</li> 
+            </ul> 
+            <a href="./assets/ride_management_project_report.pdf" target="_blank">📄 View Final Report (PDF)</a> 
+        </div> 
+    </div>
+
+
+    <!-- Modal for Project 6 --> 
+     <div id="modal6" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeModal('modal6')">&times;</span> 
+            <h2>Sentiment Classification & Medical Image Generation</h2> 
+            <p>This project explores two real-world deep learning applications — sentiment classification using NLP techniques and synthetic medical image generation using GANs.</p> 
+            <ul> 
+                <li><strong>Part 1 – IMDb Sentiment Classification:</strong></li> 
+                <ul> 
+                    <li>Dataset: IMDb Movie Reviews</li> 
+                    <li>Text Preprocessing: Tokenization, stopword removal, lemmatization, HTML stripping</li> 
+                    <li>Embedding: Word2Vec</li> <li>Models: RNN, GRU, LSTM, BiLSTM</li> 
+                    <li><strong>Best Result:</strong> BiLSTM + Word2Vec → 71.5% Accuracy in 9 epochs</li> 
+                </ul> 
+                <li><strong>Part 2 – DCGAN on PathMNIST:</strong></li> 
+                <ul> 
+                    <li>Dataset: PathMNIST (MedMNIST series)</li> 
+                    <li>Architecture: DCGAN with custom generator and discriminator using CNN layers</li> 
+                    <li>Evaluation: FID score tracked every 100 epochs → Best FID: 187.17 at epoch 300</li> 
+                    <li>Challenge: Mode collapse identified via loss curves and image repetition patterns</li> 
+                    <li><strong>Final FID Score:</strong> 220.91 after 1000 epochs</li> 
+                </ul> 
+                <li><strong>Technologies:</strong> Python, PyTorch, Word2Vec, RNN variants, DCGAN</li> 
+            </ul> 
+            <a href="./assets/Results.pdf" target="_blank">📄 View Full Report (PDF)</a> 
+        </div> 
+    </div>
+
+    <!-- Repeat for modal2, modal3, modal4 -->
+</section>
+
+<section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+            <img src="assets/email.png" 
+            alt="Email Icon"
+            class="icon contact-icon email-icon"/>
+            <p><a href="mailto:aishwaryathorat723@gmail.com">aishwaryathorat723@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+            <img src="assets/linkedin.png" 
+            alt="Linkedin Icon"
+            class="icon contact-icon"/>
+            <p><a href="https://www.linkedin.com/in/aishwaryathorat/">Linkedin</a></p>
+        </div>
+
+        <!-- Phone Contact --> 
+         <div class="contact-info-container"> 
+            <img src="assets/phone.png" alt="Phone Icon" class="icon contact-icon"/> 
+            <p><a href="tel:+11234567890">+1 (408) 581-4992</a></p> 
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <nav>
+        <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <p>Copyright &#169; 2025 Aishwarya Thorat. All Rights Reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
