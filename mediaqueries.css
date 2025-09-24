@@ -12,6 +12,13 @@
     height: fit-content;
   }
 }
+.contact-info-container{
+  gap: 0rem;
+  margin: 0.8rem;
+}
+.contact-info-container p{
+  font-size: medium;
+}
 
 @media screen and (max-width: 1200px) {
   #desktop-nav {
@@ -74,7 +81,8 @@
   }
   .contact-info-container p,
   .nav-links li a {
-    font-size: 1rem;
+    font-size: 0.6rem;
+  
   }
   .experience-sub-title {
     font-size: 1.25rem;
