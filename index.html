@@ -205,28 +205,28 @@
     <h1 class="title">Projects</h1>
     <div class="projects-container">
         <!-- Project 1 -->
-        <!-- <div class="project-card" onclick="openModal('modal1')"> 
-            <img src="./assets/medvqa.png" alt="Med-VQA Project" class="project-img"> 
-            <h3 class="project-title">Med-VQA: Medical Visual QA</h3> 
-        </div> -->
+        <div class="project-card" onclick="openModal('modal1')"> 
+            <img src="./assets/cancer_diagnosis.png" alt="Cancer Diagnosis using Multimodal LLM Pipeline" class="project-img"> 
+            <h3 class="project-title">Cancer Diagnosis using Multimodal LLM Pipeline</h3> 
+        </div>
 
         <!-- Project 2 -->
-        <!-- <div class="project-card" onclick="openModal('modal2')">
-            <img src="./assets/chatbot.jpg" alt="Chatbot with Personality" class="project-img">
-            <h3 class="project-title">Chatbot with Personality</h3>
-        </div> -->
+        <div class="project-card" onclick="openModal('modal2')">
+            <img src="./assets/mock_interview_image.jpeg" alt="AI Mock Interviewer" class="project-img">
+            <h3 class="project-title">AI Mock Interviewer</h3>
+        </div>
 
         <!-- Project 3 -->
-        <!-- <div class="project-card" onclick="openModal('modal3')">
+        <div class="project-card" onclick="openModal('modal3')">
             <img src="./assets/agentic_ai.png.webp" alt="Agentic AI System" class="project-img">
             <h3 class="project-title">Agentic AI: Full-Stack Code Builder</h3>
-        </div> -->
+        </div> 
 
         <!-- Project 4 -->
-        <!-- <div class="project-card" onclick="openModal('modal4')">
-            <img src="./assets/AWS_pipeline.jpg" alt="Sentiment Analysis on Yelp Reviews" class="project-img">
-            <h3 class="project-title">Sentiment Analysis on Yelp</h3>
-        </div> -->
+        <div class="project-card" onclick="openModal('modal4')">
+            <img src="./assets/emotionally_intelligent.jpeg" alt="Emotionally Intelligent Dialogue System" class="project-img">
+            <h3 class="project-title">Emotionally Intelligent Dialogue System</h3>
+        </div>
 
         <!-- Project 5 -->
         <!-- <div class="project-card" onclick="openModal('modal5')">
@@ -242,47 +242,54 @@
     <!-- </div> -->
 
     <!-- Modal Structure (One for each project) -->
-    <!-- <div id="modal1" class="modal">
+    <div id="modal1" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Med-VQA: Multimodal Medical Visual Question Answering</h2> 
-            <p>A research project exploring Medical Visual Question Answering (VQA) using a LoRA fine-tuned LLaVA-Med model and OpenAI model integrated with multimodal Retrieval-Augmented Generation (RAG) and advanced prompting strategies (Few-Shot, Chain-of-Thought, Tree-of-Thought) to enhance accuracy and explainability. 
-                The system retrieves relevant visual (X-rays/MRIs) and textual (PubMedQA, SLAKE, PMC-VQA) data to generate informed answers with strong visual-language reasoning capabilities.
-            </p> 
-            <br>
-            <ul> 
-                <li><strong>Overview:</strong> System that answers medical questions from X-rays/MRIs using visual + textual retrieval.</li> 
-                <li><strong>Techniques:</strong> Prompting (Few-Shot, CoT, ToT), RAG with PubMedQA, SLAKE, PMC-VQA</li> 
-                <li><strong>Fine-tuning:</strong> Lightweight LoRA-tuned LLaVA-Med</li> 
-                <li><strong>Performance:</strong> CoT/ToT Recall: 77%, LoRA Accuracy: 54.27%, RAG Recall: 71.83%</li> 
-                <li><strong>Technologies:</strong> Python, PyTorch, FAISS, CLIP, MiniLM, GPT-4 API, LLaVA-Med</li> 
-                <li><strong>Features:</strong> Explainability, Visual + Text reasoning, Few-shot & zero-shot inference</li> 
-            </ul> 
-            <a href="./assets/MedVQA_Final_Project_Report.pdf" target="_blank">📄 View Full Report</a> 
-        </div>
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <h2>Cancer Pathology MLLM</h2>  
+    <p>A multimodal research project integrating Vision Transformers and Large Language Models for cancer pathology image classification.  
+       The system combines caption-guided instruction tuning, retrieval-augmented generation (RAG), and advanced prompting strategies (Zero-Shot, Few-Shot, Chain-of-Thought, Tree-of-Thought) to balance accuracy with interpretability in medical AI diagnostics.
+    </p> 
+    <br>
+    <ul> 
+        <li><strong>Overview:</strong> Multimodal framework for cancer pathology diagnosis using histopathology images + medical text.</li> 
+        <li><strong>Techniques:</strong> Caption-guided instruction tuning (BLIP2 + GPT-2), RAG with dual-channel fusion (image + text), CoT & ToT prompting.</li> 
+        <li><strong>Datasets:</strong> PatchCamelyon (PCam), PatchGastricADC22, BIOMEDICA.</li> 
+        <li><strong>Performance:</strong> 
+            <ul>
+                <li>ViT + LoRA: 87% Accuracy, 87.5% Recall</li>
+                <li>GPT-4o + CoT: 74% Accuracy</li>
+                <li>RAG + CoT: up to 88.6% Recall</li>
+            </ul>
+        </li>
+        <li><strong>Technologies:</strong> Python, PyTorch, CLIP, BLIP2, GPT-2, FAISS, LLaVA, GPT-4o.</li> 
+        <li><strong>Features:</strong> Explainable AI (captions + reasoning), Visual + Text retrieval, Low-resource fine-tuning with LoRA, Clinical interpretability.</li> 
+    </ul> 
+    <a href="./assets/CancerPathology_MLLM_Report.pdf" target="_blank">📄 View Full Report</a> 
+</div>
+
     </div>
 
-
-    <div id="modal2" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" onclick="closeModal('modal2')">&times;</span> 
-            <h2>Chatbot with Personality</h2>
-            <p> A Retrieval-Augmented Generation (RAG) based chatbot designed to mimic the speaking styles of famous personalities like Elon Musk, Morgan Freeman, and David Attenborough. 
-                Combines semantic retrieval, personality tagging, and stylistic prompting to produce engaging, in-character conversations. 
-            </p> 
-            <br>
-            <ul> 
-                <li><strong>Goal:</strong> Simulate personality-driven Q&A using real-world interviews, books, and podcasts</li> 
-                <li><strong>Data Pipeline:</strong> Speech-to-text (Whisper), Speaker Labeling (Gemini), Q&A generation, metadata tagging (tone, emotion, situation, style)</li> 
-                <li><strong>Retrieval:</strong> Sentence-BERT (MiniLM) embeddings stored in FAISS for fast, semantic vector search</li> 
-                <li><strong>Response Generation:</strong> Gemini, GPT-4, or LLaMA generate final responses based on context & persona</li> 
-                <li><strong>Deployment:</strong> Streamlit + Google Cloud + Cloud Functions for scalable chatbot serving</li> 
-                <li><strong>Results:</strong> Avg. human-rated personality alignment scores: Elon (4.7), Freeman (4.46), Attenborough (4.1)</li> 
-            </ul> 
-            <a href="./assets/ChatBot-With-Personality.pdf" target="_blank">📄 View Final Report (PDF)</a> 
-            <a href="https://github.com/leoncorreia/persona-chatbot" target="_blank">🌐 GitHub Repository</a>  -->
-        <!-- </div> 
-    </div> -->
+<div id="modal2" class="modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <h2>AI Mock Interviewer</h2>  
+    <p>An intelligent mock interview platform tailored for Data Analytics and Data Science roles.  
+       It dynamically generates role-specific interview questions, evaluates both technical and behavioral responses, and provides real-time feedback.  
+       Built with fine-tuned LLMs, Retrieval-Augmented Generation (RAG), and cloud-based ETL pipelines, the system enhances adaptability, realism, and personalized preparation for candidates.
+    </p> 
+    <br>
+    <ul> 
+        <li><strong>Overview:</strong> Simulates interviews for Data Scientist, Data Analyst, ML Engineer, and Data Engineer roles.</li> 
+        <li><strong>Techniques:</strong> Gemini NER for metadata extraction, RAG with ChromaDB, LoRA fine-tuned LLaMA3 & Mistral, reinforcement prompting.</li> 
+        <li><strong>Features:</strong> Adaptive questioning, multi-turn conversations, real-time feedback on correctness & confidence, text + voice support.</li> 
+        <li><strong>Datasets:</strong> 157k+ Q&A pairs from Kaggle, GitHub, Glassdoor, Reddit, StackOverflow + MIT Interview Voice Dataset.</li>
+        <li><strong>Performance:</strong> LLaMA3 achieved Perplexity 6.37 vs Mistral 8.74; RAG + NER ensures contextual, company/role-specific interviews.</li>
+        <li><strong>Technologies:</strong> Python, PyTorch, TensorFlow, FAISS, ChromaDB, Whisper, React, FastAPI, Amazon S3, GCP.</li> 
+        <li><strong>Future Scope:</strong> Voice input via Whisper, resume-based customization, multi-agent skill-matching.</li>
+    </ul> 
+    <a href="./assets/AI_Mock_Interviewer_Report.pdf" target="_blank">📄 View Full Report</a> 
+</div>
+</div>
 
 
     <div id="modal3" class="modal"> 
@@ -306,26 +313,31 @@
     </div>
 
 
-    <!-- <div id="modal4" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" onclick="closeModal('modal4')">&times;</span> 
-            <h2>Real-Time Sentiment Analysis on Yelp Dataset</h2> 
-            <p> A scalable pipeline for processing and sentiment analysis of Yelp reviews using hybrid architecture — combining Apache Spark, Kafka, and AWS services. </p> 
-            <br>
-            <ul> 
-                <li><strong>Streaming Stack:</strong> Yelp API → Kafka → Spark Streaming → AWS S3 → Glue (ETL)</li> 
-                <li><strong>Batch Architecture:</strong> Transformed data analyzed via Athena SQL & visualized in QuickSight</li> 
-                <li><strong>ML Models:</strong> Logistic Regression + TF-IDF, BERT, LIME for Explainable AI</li> 
-                <li><strong>Algorithms:</strong> Reservoir Sampling, Bloom Filters, DGIM, Locality Sensitive Hashing</li> 
-                <li><strong>Privacy Techniques:</strong> K-Anonymity & Differential Privacy over review data</li> 
-                <li><strong>Performance:</strong> 79% sentiment accuracy using Logistic Regression (SageMaker)</li> 
-                <li><strong>Tools:</strong> AWS S3, Glue, Athena, SageMaker, Spark, Kafka, Tableau, OpenAI API</li> 
-            </ul> 
-            <a href="./assets/Bigdata_finalReport.pdf" target="_blank">📄 View Final Report (PDF)</a> 
-        </div> 
+    <div id="modal4" class="modal"> 
+        <div class="modal-content">
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <h2>Emotionally Intelligent Dialogue System</h2>  
+    <p>A deep learning framework for personality-aware, emotionally intelligent dialogue generation.  
+       Built on the PELD dataset (derived from <em>Friends</em> scripts), the system integrates emotion dynamics (VAD),  
+       personality traits (OCEAN), and mood transitions to generate contextually and emotionally coherent AI responses.
+    </p> 
+    <br>
+    <ul> 
+        <li><strong>Overview:</strong> Personality-conditioned emotion prediction using Valence–Arousal–Dominance (VAD) vectors instead of categorical labels.</li> 
+        <li><strong>Techniques:</strong> BERT embeddings, Mood Transition Modeling, OCEAN-to-VAD projection, Multi-head Affective Attention, Graph Neural Networks.</li> 
+        <li><strong>Experiments:</strong> Benchmarked 6 models — HTN+GRU, TCN, BERT+BiGRU, GNN, Autoencoder, Multi-head Attention.</li> 
+        <li><strong>Performance:</strong> Temporal Convolutional Network (TCN) achieved Macro-F1 = 0.43, Micro-F1 = 0.55,  
+            outperforming baseline Macro-F1 = 0.33; notable improvements in rare emotions like Disgust and Surprise.</li>
+        <li><strong>Dataset:</strong> PELD (6,510 samples) — dialogue triples annotated with OCEAN traits and mapped to VAD emotion vectors.</li>
+        <li><strong>Key Features:</strong> Personality-conditioned mood transitions, rare-emotion classification gains, psychologically grounded affective modeling.</li>
+        <li><strong>Future Work:</strong> Multimodal expansion (speech, facial cues), explainable mood trajectories, deployment in interactive systems.</li>
+    </ul> 
+    <a href="./assets/Emotionally_Intelligent_Dialogue_Report.pdf" target="_blank">📄 View Full Report</a> 
+</div>
+
     </div>
 
-     Modal for Project 5 --> 
+     <!--Modal for Project 5 --> 
      <!-- <div id="modal5" class="modal"> 
         <div class="modal-content"> 
             <span class="close" onclick="closeModal('modal5')">&times;</span> 
