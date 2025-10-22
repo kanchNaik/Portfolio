@@ -1,445 +1,820 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kanchan Naik — Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <nav id="desktop-nav">
-        <div class="logo"> Kanchan Ashok Naik</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Desktop Nav -->
+  <nav id="desktop-nav" aria-label="Primary">
+    <div class="logo">Kanchan Ashok Naik</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <nav id="hamburger-nav">
-        <div class="logo"> Kanchan Ashok Naik</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  <!-- Mobile Nav -->
+  <nav id="hamburger-nav" aria-label="Primary (mobile)">
+    <div class="logo">Kanchan Ashok Naik</div>
+    <div class="hamburger-menu">
+      <button
+        class="hamburger-icon"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-            </div>
-        </div>
+      <ul id="mobile-menu" class="menu-links" role="menu">
+        <li role="none"><a role="menuitem" href="#about" data-close-menu>About</a></li>
+        <li role="none"><a role="menuitem" href="#experience" data-close-menu>Experience</a></li>
+        <li role="none"><a role="menuitem" href="#projects" data-close-menu>Projects</a></li>
+        <li role="none"><a role="menuitem" href="#contact" data-close-menu>Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    </nav>
+  <!-- Hero / Profile -->
+  <section id="profile">
+    <div class="section__pic-container">
+      <img
+        src="./assets/profilepic.jpeg"
+        alt="Portrait of Kanchan Ashok Naik"
+        loading="eager"
+        decoding="async"
+        width="360"
+        height="360"
+        style="border-radius:50%;"
+      />
+    </div>
 
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profilepic.jpeg" alt="Kanchan's Profile Picture" style="border-radius: 50%;">
-        </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h2 class="title">Kanchan Ashok Naik</h2>
+      <p class="section__text__p2">Software Engineer | Applied AI & ML</p>
+      <p class="section__text__p3">Transforming Data into Intelligence</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-2" type="button" onclick="window.open('./assets/Kanchan_Naik_Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" type="button" onclick="location.href='#contact'">
+          Contact Info
+        </button>
+      </div>
+
+      <div id="socials-container" aria-label="Social links">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn"
+          class="icon"
+          loading="lazy"
+          decoding="async"
+          onclick="location.href='https://www.linkedin.com/in/kanchan-ashok-naik/'"
+        />
+        <img
+          src="./assets/github.png"
+          alt="GitHub"
+          class="icon"
+          loading="lazy"
+          decoding="async"
+          onclick="location.href='https://github.com/kanchNaik'"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <p class="section__text__p1">Get to know more</p>
+    <h1 class="title">About Me</h1>
+
+    <div class="section-container">
+      <div class="about-details-container">
         <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h2 class="title">Kanchan Ashok Naik</h1>
-            <p class="section__text__p2">Software Engineer | Applied AI & ML</p>
-            <p class="section__text__p3">Transforming Data into Intelligence</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/Kanchan_Naik_Resume.pdf')">
-                    Download CV
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='#contact'">
-                    Contact Info
-                </button>
-            </div>
+          <h2 class="title">Hi, I’m <span class="accent">Kanchan</span> 👋</h2>
 
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkedin Profile" class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/kanchan-ashok-naik/'"/>
+          <p class="lead">
+            I’m a curious problem solver who turns messy data and complex systems into intelligent, scalable solutions.
+            My foundation is in software engineering and I now focus on building human-centered AI that delivers real business impact.
+          </p>
 
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" 
-                onclick="location.href='https://github.com/kanchNaik'"/>
-            </div>
+          <ul class="highlights">
+            <li><strong>Software impact:</strong> Built a personalized recommendation engine (↑30% CTR) and a fraud-detection pipeline that safeguarded high-value transactions.</li>
+            <li><strong>AI work:</strong> LLM-powered mock interview simulator (GPT-4o, LLaMA-2, Whisper), multimodal cancer pathology framework (CLIP + BLIP + RAG), and an agentic AI code assistant orchestration.</li>
+            <li><strong>Approach:</strong> I blend production-grade engineering with interpretable AI and a human-centered mindset.</li>
+          </ul>
+
+          <p class="personal">
+            Outside tech, I love how people learn and communicate — I design interfaces and models with that curiosity in mind.
+            I also enjoy crochet 🧶; small patterns and patience make beautiful results.<br />
+            <a
+              href="https://www.instagram.com/ChainReaction_Craft/"
+              class="insta-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow my crochet on Instagram — <span class="handle">@ChainReaction_Craft</span>
+            </a>
+          </p>
+
+          <ul class="highlights">
+            <li>Microservices & distributed systems at scale</li>
+            <li>RAG, LLM apps, and recommender systems</li>
+            <li>MLOps: pipelines, retraining, and observability</li>
+          </ul>
+
+          <div class="btn-container">
+            <a href="#projects" class="btn btn-primary">See my projects</a>
+            <a href="mailto:kanchannaik55@gmail.com" class="btn btn-outline">Contact me</a>
+          </div>
         </div>
-    </section>
-
-    <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="about-details-container">
-                <!-- <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" 
-                        alt="Experience Icon"
-                        class="icon"/>
-                        <h3>Experience</h3> 
-                        <p>5+ years <br/> Full Stack Software Engineer (ML focused)</p>
-                        <p>1+ years <br/> AI/ML Engineer</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" 
-                        alt="Education Icon"
-                        class="icon"/>
-                        <h3>Education</h3> 
-                        <p>Masters in <br/> Applied Data Science</p>
-                    </div>
-                </div> -->
-                <div class="section__text">
-    <h2 class="title">Hi, I’m <span class="accent">Kanchan</span> 👋</h2>
-
-    <p class="lead">
-      I’m a curious problem solver who turns messy data and complex systems into intelligent, scalable solutions. My foundation is in software engineering and I now focus on building human-centered AI that delivers real business impact.
-    </p>
-
-    <ul class="highlights">
-      <li><strong>Software impact:</strong> Built a personalized recommendation engine (↑30% CTR) and a fraud-detection pipeline that safeguarded high-value transactions.</li>
-      <li><strong>AI work:</strong> LLM-powered mock interview simulator (GPT-4o, LLaMA-2, Whisper), multimodal cancer pathology framework (CLIP + BLIP + RAG), and an agentic AI code assistant orchestration.</li>
-      <li><strong>Approach:</strong> I blend production-grade engineering with interpretable AI and a human-centered mindset.</li>
-    </ul>
-
-    <p class="personal">
-      Outside tech, I love how people learn and communicate — I design interfaces and models with that curiosity in mind. I also enjoy crochet 🧶; small patterns and patience make beautiful results.
-      <br>
-      <a href="https://www.instagram.com/ChainReaction_Craft/" class="insta-link" target="_blank" rel="noopener noreferrer">
-        Follow my crochet on Instagram — <span class="handle">@ChainReaction_Craft</span>
-      </a>
-    </p>
-<ul class="highlights">
-          <li>Microservices & distributed systems at scale</li>
-          <li>RAG, LLM apps, and recommender systems</li>
-          <li>MLOps: pipelines, retraining, and observability</li>
-        </ul>
-    <div class="btn-container">
-      <a href="#projects" class="btn btn-primary">See my projects</a>
-      <a href="mailto:kanchannaik55@gmail.com" class="btn btn-outline">Contact me</a>
+      </div>
     </div>
-    
-  </div>
+
+    <img
+      src="./assets/arrow.png"
+      alt="Scroll to experience"
+      class="icon arrow"
+      loading="lazy"
+      decoding="async"
+      onclick="location.href='./#experience'"
+    />
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <div class="article-container">
+            <article>
+              <div class="experience-sub-title-container">
+                <h2 class="experience-sub-title">AI/ML Engineering Intern</h2>
+                <img src="./assets/pyramyd_logo.png" class="icon_logo" alt="Pyramyd.ai logo" />
+              </div>
+              <div>
+                <h3>Pyramyd.ai — May 2025 to Aug 2025</h3>
+                <ul>
+                  <li>Architected an AI-powered software scoring platform for 3000+ SaaS vendors using RAG pipelines, model fine tuning and multi agent orchestrations achieving 300 ms latency and 99.9% uptime</li>
+<li>Implemented MCP-based AI agents to orchestrate retrieval, scoring, and recommendation flows across LLM, graph, and sentiment models, improving context adaptation and reducing redundant calls by 25%.</li>
+
+<li>Designed and trained a semantic matching model using Sentence-BERT with CosineSimilarityLoss to align unstructured review text with predefined product feature descriptions.</li>
+<li>Engineered a feature-level review analysis pipeline, combining dynamic text chunking, embedding clustering (UMAP + HDBSCAN), and multi-step data enrichment (fuzzy feature mapping, chunk aggregation).</li>
+<li>Developed contrastive learning pipeline improving vendor–buyer match recall by 14% and deployed it via FAST APIs.</li>
+
+<li>Performed PEFT and LoRA fine-tuning on OpenAI and Open source models for extracting aspects and sentiments from user reviews</li>
+<li>Integrated Aspect-Based Sentiment Analysis (ABSA) and few-shot prompting using OpenAI o4-mini-high to capture feature-level sentiment, enabling interpretable, data-driven scoring insights across customer feedback.</li>
+
+<li>Designed a graph-based model to depict competitors &amp; capabilities of software using feature and review similarity.</li>
+
+<li>Implementing a Multi-Layer Perceptron (MLP)-based regression model with uncertainty estimation, meta-modeling, and k-fold validation to ensure prediction robustness and reliability.</li>
+
+<li>Automated model refresh and deployment with MLflow on GCP, reducing manual model retraining by 3.3x.</li>
+
+
+                </ul>
+              </div>
+            </article>
+
+            <br />
+
+            <article>
+              <div class="experience-sub-title-container">
+                <h2 class="experience-sub-title">Senior Software Developer</h2>
+                <img src="./assets/musafir_logo.png" class="icon_logo" alt="Musafir logo" />
+              </div>
+              <div>
+                <h3>Musafir.com India Pvt. Ltd. — 07/2018 to 11/2023</h3>
+                <ul>
+  <li>Engineered a hybrid recommender system to personalize travel suggestions, increasing booking conversion by 25% and click-through rate by 30%.</li>
+  <li>Developed an autoencoder-based fraud detection pipeline blocking 80% of fake bookings, saving USD 90K annually in chargebacks.</li>
+  <li>Revamped flight and hotel booking systems using .NET Core microservices, cutting downtime by 40% and improving API latency from 800ms to 400ms for 1M+ daily requests.</li>
+  <li>Introduced async operations, lazy loading, and connection pooling in flight search APIs, reducing response time from 4s to 800ms.</li>
+  <li>Built Musafir’s first iOS flight engine, improving search speed by 50% and integrating multi-fare support without disrupting legacy systems.</li>
+  <li>Architected high-performance REST and gRPC APIs and event-driven pipelines using Kafka and Spark for flight, seat, and price tracking systems.</li>
+  <li>Built a centralized auth framework (OAuth2, JWT, SSO) unifying login across 8+ web and mobile apps, improving security and UX.</li>
+  <li>Optimized PostgreSQL, MongoDB, and Redis using indexing, partitioning, and caching, improving query performance by 45% at peak load.</li>
+  <li>Delivered a Dialogflow chatbot to enable conversational flight bookings, reducing operational support queries by 20% and overall overhead by 70%.</li>
+  <li>Automated multi-level corporate travel approval workflows and integrated internal team conversations, cutting manual processing by 50%+.</li>
+  <li>Implemented ETL pipelines and BI dashboards for finance, operations, and reporting, driving real-time data insights and reducing support tickets by 28%.</li>
+  <li>Developed React-based UI components and metadata tagging frameworks to classify, filter, and visualize travel data for targeted use cases.</li>
+  <li>Integrated 10+ third-party airline, hotel, and supplier APIs via modular adapters, improving inventory coverage and system resiliency.</li>
+  <li>Built a hackathon-winning NLP “text-to-booking” prototype that enabled airline bookings from SMS, restoring USD 100K in lost revenue.</li>
+  <li>Led design discussions, code reviews, and agile sprints to ensure clean, maintainable code, improving team velocity and delivery quality.</li>
+  <li>Mentored a 12-member engineering team and authored onboarding and technical documentation, reducing ramp-up time for new hires.</li>
+</ul>
+
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-            </div>
-        </div>
 
-        <img src="./assets/arrow.png" alt="Arrow Icon"
-        class="icon arrow" 
-        onclick="location.href='./#experience'"/>
-    </section>
+    <img
+      src="./assets/arrow.png"
+      alt="Scroll to projects"
+      class="icon arrow"
+      loading="lazy"
+      decoding="async"
+      onclick="location.href='./#projects'"
+    />
+  </section>
 
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-containers">
-                    
-                    <div class="article-container">
-                        <article>
-                            <div class="experience-sub-title-container">
-                                <h2 class="experience-sub-title">AI/ML Engineering Intern</h2>
-                                <img src="./assets/pyramyd_logo.png" alt="Experience Icon"
-                                class="icon_logo"/>
-                            </div>
-                            <div>
-                                <!-- <h2>Senior Data Scientist at</h2> -->
-                                <h3>Pyramyd.ai May 2025 - Aug 2025</h3>
-                                    <ul>
-                                        <li>Fine-tuned GPT-2 & Mistral-7B on 50K SaaS reviews for aspect-based sentiment analysis (ABSA), achieving 91% F1 in extracting feature-level opinions (pricing, integrations, UX).</li>
-<li>Applied contrastive fine-tuning of SBERT embeddings with a neural projection head, boosting vendor–buyer match recall by 14% in the competitive-intelligence graph.</li>
-<li>Designed a graph-based competitor model where nodes represent vendors and edges encode feature/review similarity; applied graph embeddings + community detection to reveal clusters of competing products and market gaps.</li>
-<li>Built a requirement-extraction & scoring engine that converts free-form buyer needs into structured specs, ranking ~3,000 vendors for GTM and procurement teams.</li>
-<li>Shipped a real-time RAG search API (Pinecone + FAISS) with P95 < 300ms latency and 99.9% uptime, enabling buyers to surface comparable vendor evidence instantly.</li>
-<li>Developed capability-coverage clustering pipeline using UMAP + HDBSCAN, reducing solution architect analysis time by 3.3×.</li>
-<li>Automated weekly model refreshes + fairness checks with MLflow CI/CD pipelines (GCP), eliminating manual retraining overhead.</li>
-
-                                    </ul>
-                            </div>
-                        </article>
-                        <br>
-                        <article>
-                            <div class="experience-sub-title-container">
-                                <h2 class="experience-sub-title">Senior Software Developer</h2>
-                                <img src="./assets/musafir_logo.png" alt="Experience Icon"
-                                class="icon_logo"/> 
-                            </div>
-                            <div>
-                                <!-- <h2>Senior Data Scientist at</h2> -->
-                                <h3>Musafir.com India Pvt.Ltd. - 07/2018 to 11/2023</h3>
-                                    <ul>
-                                        <li>Spearheaded the architecture revamp of flight and hotel systems using microservices (.NET Framework, .NET Core), with my first hotel microservice becoming a reference/boilerplate for future integrations, reducing downtime by 40% and enabling scalable third-party integrations.</li>
-<li>Designed and implemented Musafir’s first iOS flight engine, optimizing performance with lazy loading, asynchronous operations, and connection pooling, improving flight search speed by 50%.</li>
-<li>Integrated third-party flight providers and implemented multiple fares support, ensuring real-time availability of major airlines across the Middle East and India without disrupting legacy systems.</li>
-<li>Developed fraudulent booking detection using autoencoders (achieving 80% accuracy) and hybrid recommendation algorithms to enhance security and personalized customer experience.</li>
-<li>Automated operational workflows and built multi-approval corporate travel pipelines, reducing manual workload by over 50% and streamlining client approval processes.</li>
-<li>Built ETL pipelines, finance and BI dashboards, and a centralized conversation support architecture, enabling data-driven decision-making, accurate revenue reporting, and faster customer query resolution.</li>
-<li>Designed and optimized scalable database architecture with advanced SQL techniques, improving system performance by 60%.</li>
-<li>Developed UI components using React and JavaScript for Tags, Travelers, and Approval dashboards, improving usability and operational efficiency.</li>
-<li>Implemented chatbot solutions using Dialogflow NLP, reducing operational staff overhead by 70% by providing flight search results via chat.</li>
-<li>Participated in a hackathon, building a text-parsing booking model to extract bookings from airline text descriptions, enabling accurate revenue reporting.</li>
-
-                                    </ul>
-                            </div>
-                        </article>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <img src="./assets/arrow.png" 
-        alt="Arrow Icon"
-        class="icon arrow" 
-        onclick="location.href='./#projects'"/>
-    </section>
-
-
-
-    <section id="projects">
+  <!-- Projects -->
+  <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
+
     <div class="projects-container">
-        <!-- Project 1 -->
-        <div class="project-card" onclick="openModal('modal1')"> 
-            <img src="./assets/cancer_diagnosis.png" alt="Cancer Diagnosis using Multimodal LLM Pipeline" class="project-img"> 
-            <h3 class="project-title">Cancer Diagnosis using Multimodal LLM Pipeline</h3> 
-        </div>
+      <!-- Project 1 -->
+      <div class="project-card" data-open-modal="modal1" tabindex="0" role="button" aria-haspopup="dialog">
+        <img src="./assets/cancer_diagnosis.png" alt="Cancer Pathology MLLM" class="project-img" loading="lazy" decoding="async" />
+        <h3 class="project-title">Cancer Diagnosis using Multimodal LLM Pipeline</h3>
+      </div>
 
-        <!-- Project 2 -->
-        <div class="project-card" onclick="openModal('modal2')">
-            <img src="./assets/mock_interview_image.jpeg" alt="AI Mock Interviewer" class="project-img">
-            <h3 class="project-title">AI Mock Interviewer</h3>
-        </div>
+      <!-- Project 2 -->
+      <div class="project-card" data-open-modal="modal2" tabindex="0" role="button" aria-haspopup="dialog">
+        <img src="./assets/mock_interview_image.jpeg" alt="AI Mock Interviewer" class="project-img" loading="lazy" decoding="async" />
+        <h3 class="project-title">AI Mock Interviewer</h3>
+      </div>
 
-        <!-- Project 3 -->
-        <div class="project-card" onclick="openModal('modal3')">
-            <img src="./assets/agentic_ai.png.webp" alt="Agentic AI System" class="project-img">
-            <h3 class="project-title">Agentic AI: Full-Stack Code Builder</h3>
-        </div> 
+      <!-- Project 3 -->
+      <div class="project-card" data-open-modal="modal3" tabindex="0" role="button" aria-haspopup="dialog">
+        <img src="./assets/agentic_ai.png.webp" alt="Agentic AI System" class="project-img" loading="lazy" decoding="async" />
+        <h3 class="project-title">Agentic AI: Full-Stack Code Builder</h3>
+      </div>
 
-        <!-- Project 4 -->
-        <div class="project-card" onclick="openModal('modal4')">
-            <img src="./assets/emotionally_intelligent.jpeg" alt="Emotionally Intelligent Dialogue System" class="project-img">
-            <h3 class="project-title">Emotionally Intelligent Dialogue System</h3>
-        </div>
+      <!-- Project 4 -->
+      <div class="project-card" data-open-modal="modal4" tabindex="0" role="button" aria-haspopup="dialog">
+        <img src="./assets/emotionally_intelligent.jpeg" alt="Emotionally Intelligent Dialogue System" class="project-img" loading="lazy" decoding="async" />
+        <h3 class="project-title">Emotionally Intelligent Dialogue System</h3>
+      </div>
 
-        <!-- Project 5 -->
-        <!-- <div class="project-card" onclick="openModal('modal5')">
-            <img src="./assets/ride.png" alt="Uber Ride App" class="project-img">
-            <h3 class="project-title">Ride Management System</h3>
-        </div> -->
-
-        <!-- Project 6 --> 
-         <!-- <div class="project-card" onclick="openModal('modal6')"> 
-            <img src="./assets/senti_gan.jpg" alt="NLP and GAN Project" class="project-img"> 
-            <h3 class="project-title">NLP + GAN: Sentiment & Medical Image Gen</h3> 
-        </div> -->
-    <!-- </div> -->
-
-    <!-- Modal Structure (One for each project) -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <h2>Cancer Pathology MLLM</h2>  
-    <p>A multimodal research project integrating Vision Transformers and Large Language Models for cancer pathology image classification.  
-       The system combines caption-guided instruction tuning, retrieval-augmented generation (RAG), and advanced prompting strategies (Zero-Shot, Few-Shot, Chain-of-Thought, Tree-of-Thought) to balance accuracy with interpretability in medical AI diagnostics.
-    </p> 
-    <br>
-    <ul> 
-        <li><strong>Overview:</strong> Multimodal framework for cancer pathology diagnosis using histopathology images + medical text.</li> 
-        <li><strong>Techniques:</strong> Caption-guided instruction tuning (BLIP2 + GPT-2), RAG with dual-channel fusion (image + text), CoT & ToT prompting.</li> 
-        <li><strong>Datasets:</strong> PatchCamelyon (PCam), PatchGastricADC22, BIOMEDICA.</li> 
-        <li><strong>Performance:</strong> 
-            <ul>
-                <li>ViT + LoRA: 87% Accuracy, 87.5% Recall</li>
-                <li>GPT-4o + CoT: 74% Accuracy</li>
-                <li>RAG + CoT: up to 88.6% Recall</li>
-            </ul>
-        </li>
-        <li><strong>Technologies:</strong> Python, PyTorch, CLIP, BLIP2, GPT-2, FAISS, LLaVA, GPT-4o.</li> 
-        <li><strong>Features:</strong> Explainable AI (captions + reasoning), Visual + Text retrieval, Low-resource fine-tuning with LoRA, Clinical interpretability.</li> 
-    </ul> 
-    <a href="./assets/CancerPathology_MLLM_Report.pdf" target="_blank">📄 View Full Report</a> 
-</div>
-
+      <!-- Project 5 -->
+      <div class="project-card" data-open-modal="modal5" tabindex="0" role="button" aria-haspopup="dialog">
+        <img src="./assets/chatbotImage.jpeg" alt="AI Support Assistant" class="project-img" loading="lazy" decoding="async" />
+        <h3 class="project-title">AI-Powered Customer Support Bot (RAG + FAQ + Tickets)</h3>
+      </div>
+	  
+	  <!--Project 6-->
     </div>
 
-<div id="modal2" class="modal">
-   <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <h2>AI Mock Interviewer</h2>  
-    <p>An intelligent mock interview platform tailored for Data Analytics and Data Science roles.  
-       It dynamically generates role-specific interview questions, evaluates both technical and behavioral responses, and provides real-time feedback.  
-       Built with fine-tuned LLMs, Retrieval-Augmented Generation (RAG), and cloud-based ETL pipelines, the system enhances adaptability, realism, and personalized preparation for candidates.
-    </p> 
+    <!-- Modals -->
+    <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1-title" hidden>
+  <div class="modal-content">
+    <button class="close" type="button" aria-label="Close" data-close-modal>&times;</button>
+    
+    <h2 id="modal1-title">Cancer Pathology – Multimodal AI Project</h2>
+    
+    <p>
+      This project uses AI to help classify cancer from pathology images.  
+      It combines computer vision and large language models (LLMs) to improve both accuracy and explainability for real clinical use.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+	
+    <p><strong>🔍 Goal:</strong><br>
+      Improve cancer detection using images + language, and make AI predictions easier to understand for doctors.
+    </p>
+	<br>
+    <p><strong>🧠 Approach:</strong><br>
+      Built a multimodal pipeline using image captioning, advanced prompting, and retrieval of similar cases to support each decision.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>💬 Prompting Techniques:</strong><br>
+      Used GPT‑4o and LLaVA with:
+      <ul>
+        <li>Zero‑shot and Few‑shot prompts (for low data use)</li>
+        <li>Chain‑of‑Thought (CoT) – step-by-step reasoning</li>
+        <li>Tree‑of‑Thought (ToT) – multiple reasoning paths</li>
+      </ul>
+    </p>
+	<br>
+    <p><strong>📡 Retrieval-Augmented Generation (RAG):</strong><br>
+      Combined CLIP and Sentence Transformers to find similar past cases.  
+      Helped generate more informative and reliable outputs.
+    </p>
+	<br>
+    <p><strong>🔧 Fine-Tuning:</strong><br>
+      Used LoRA (efficient fine-tuning) on:
+      <ul>
+        <li>ViT‑B/16 – for image-only baseline</li>
+        <li>BLIP‑2 + GPT‑2 – for generating captions from medical images</li>
+        <li>LLaVA – fine-tuned on captioned medical image pairs</li>
+      </ul>
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>✨ What’s Different:</strong></p>
+    <ul>
+      <li>Caption-guided instruction tuning for better medical understanding</li>
+      <li>Dual retrieval: visual + semantic (RAG)</li>
+      <li>Compared CoT and ToT reasoning in real diagnostic scenarios</li>
+      <li>Balanced accuracy with explainability</li>
+    </ul>
+
+    <p><strong>📈 Performance:</strong><br>
+      ViT + LoRA: 87% Accuracy / 87.5% Recall  
+      <br>RAG + CoT: up to 88.6% Recall with better interpretability
+    </p>
+
+    <p><strong>📚 Datasets:</strong><br>
+      PCam (binary cancer), PatchGastricADC22 (annotated gastric cancer), BIOMEDICA (image + caption pairs)
+    </p>
+
+    <p><strong>🛠 Tech Stack:</strong><br>
+      Python, PyTorch, HuggingFace, CLIP, BLIP‑2, FAISS, GPT‑4o, LLaVA
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p>
+      This project brings AI closer to real clinical use — by combining strong performance with clear, step-by-step explanations.
+    </p>
+
+    <a href="./assets/CancerPathology_MLLM_Report.pdf" target="_blank" rel="noopener">📄 View Full Report</a>
     <br>
-    <ul> 
-        <li><strong>Overview:</strong> Simulates interviews for Data Scientist, Data Analyst, ML Engineer, and Data Engineer roles.</li> 
-        <li><strong>Techniques:</strong> Gemini NER for metadata extraction, RAG with ChromaDB, LoRA fine-tuned LLaMA3 & Mistral, reinforcement prompting.</li> 
-        <li><strong>Features:</strong> Adaptive questioning, multi-turn conversations, real-time feedback on correctness & confidence, text + voice support.</li> 
-        <li><strong>Datasets:</strong> 157k+ Q&A pairs from Kaggle, GitHub, Glassdoor, Reddit, StackOverflow + MIT Interview Voice Dataset.</li>
-        <li><strong>Performance:</strong> LLaMA3 achieved Perplexity 6.37 vs Mistral 8.74; RAG + NER ensures contextual, company/role-specific interviews.</li>
-        <li><strong>Technologies:</strong> Python, PyTorch, TensorFlow, FAISS, ChromaDB, Whisper, React, FastAPI, Amazon S3, GCP.</li> 
-        <li><strong>Future Scope:</strong> Voice input via Whisper, resume-based customization, multi-agent skill-matching.</li>
-    </ul> 
-    <a href="./assets/AI_Mock_Interviewer_Report.pdf" target="_blank">📄 View Full Report</a> 
-</div>
+	<a href="https://huggingface.co/kanchannaik55/llava-finetuned-pcam-classification" target="_blank" rel="noopener">🤖 View Hugging Face Model</a><br>
+    <a href="https://github.com/kanchNaik/multimodalcancerclassification" target="_blank" rel="noopener">💻 View Project on GitHub</a>
+  </div>
 </div>
 
 
-    <div id="modal3" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" onclick="closeModal('modal3')">&times;</span> 
-            <h2>Agentic AI: Multi-Agent Code Generation System</h2> 
-            <p> A modular, agent-based AI architecture designed to convert natural language requests into validated frontend + backend code using API documentation and retrieval-augmented generation (RAG). 
-                Built to simulate intelligent coordination among agents and support iterative feedback loops. 
-            </p> 
-            <br>
-            <ul> 
-                <li><strong>Key Agents:</strong> Instruction Parser, Retriever (RAG), Code Generator, Code Validator, Feedback Handler, Conversation State Manager</li> 
-                <li><strong>RAG Setup:</strong> Uses BGE-small-en for embedding API docs (from CSV), stored in FAISS + metadata dictionary</li> 
-                <li><strong>Code Generator:</strong> Combines user intent, subtasks, and retrieved API docs to generate full-stack code using GPT-4 (or Mistral/LLaMA)</li> 
-                <li><strong>Validation Layer:</strong> Syntax check, linting, API match, and security screening before user delivery</li> 
-                <li><strong>Feedback Loop:</strong> User rejection triggers dynamic re-prompting using stored session history, enhancing regeneration accuracy</li> 
-                <li><strong>Tech Stack:</strong> Python, FAISS, Sentence-BERT, BeautifulSoup, Playwright, GPT-4, Mistral, Pydantic</li> 
-            </ul> 
-            <a href="./assets/Initial Architecture and Plan.pdf" target="_blank">📄 Architecture Summary (DOCX)</a> 
-        </div> 
+    <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title" hidden>
+  <div class="modal-content">
+    <button class="close" type="button" aria-label="Close" data-close-modal>&times;</button>
+
+    <h2 id="modal3-title">AI Mock Interviewer for Data Roles</h2>
+
+    <p>
+      A full-stack AI-powered mock interview platform that simulates real-time interview sessions  
+      using voice or text — with adaptive questioning, feedback, and domain-specific scoring.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🎯 Goal:</strong><br>
+      Automate and personalize mock interviews for roles like Data Analyst, Data Scientist, ML Engineer, and more.  
+      The system asks domain-specific questions, evaluates answers, and provides feedback using fine-tuned LLMs.
+    </p>
+	<br>
+    <p><strong>💡 What's Unique:</strong></p>
+    <ul>
+      <li>Uses <strong>voice or text input</strong> with OpenAI Whisper for speech-to-text</li>
+      <li><strong>Multi-round adaptive feedback</strong> like a real interviewer</li>
+      <li>Customized by <strong>role, company, and interview round</strong> via metadata + RAG</li>
+      <li><strong>Resume-aware interviews</strong> using long-context models like Qwen2.5</li>
+    </ul>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🧠 Models Used:</strong></p>
+    <ul>
+      <li><strong>LLaMA 3 (70B)</strong> – For complex reasoning and multi-turn feedback</li>
+      <li><strong>Mistral-7B</strong> – Fast and efficient for general interview tasks</li>
+      <li><strong>Gemma-7B-IT</strong> – Safe, concise, and strong for structured feedback</li>
+      <li><strong>Qwen2.5-7B</strong> – Long-context (32k tokens), used for resume-based interviews</li>
+      <li><strong>Whisper</strong> – Speech-to-text for real-time voice input</li>
+    </ul>
+	<br>
+    <p><strong>🔧 Techniques:</strong></p>
+    <ul>
+      <li><strong>LoRA & QLoRA</strong> for lightweight fine-tuning on Colab GPUs</li>
+      <li><strong>RAG</strong> pipeline (with ChromaDB + Sentence-BERT) for context injection</li>
+      <li><strong>BERT-based scoring</strong> for evaluating answers across relevance, clarity, and completeness</li>
+      <li><strong>Gemini API</strong> for entity extraction (company, role, etc.)</li>
+    </ul>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>📊 Performance:</strong><br>
+      - Mistral: BLEU 0.47, Perplexity 12.3, Macro F1 > 0.40  
+      - Gemma: Trained on 28,000+ Q&A samples, best for feedback generation  
+      - TCN + HTN-GRU tested as model variants for personality-aware response modeling
+    </p>
+	
+    <p><strong>📁 Dataset:</strong><br>
+      Custom dataset of 30k+ Q&A-feedback pairs tagged by domain, company, and interview level  
+      + Resume parsing + Behavioral scenarios
+    </p>
+
+    <p><strong>🛠 Stack:</strong><br>
+      Python, PyTorch, Hugging Face, PEFT, Transformers, Vertex AI, Google Cloud, React + FastAPI
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p>
+      This project turns static question banks into a conversational, intelligent, and personalized interview experience.  
+      Designed for scalable deployment in education platforms, career coaching tools, or hiring assessments.
+    </p>
+
+    <a href="./assets/AI_Mock_Interviewer_Report.pdf" target="_blank" rel="noopener">📄 View Full Report</a><br>
+    <a href="https://huggingface.co/kanchannaik55/llama-mock-interviewfinetuned" target="_blank" rel="noopener">🤖 View Hugging Face Model</a><br>
+    <a href="https://github.com/kanchNaik/AiMockInterviewer" target="_blank" rel="noopener">💻 View Project on GitHub</a>
+  </div>
+</div>
+
+
+    <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title" hidden>
+  <div class="modal-content">
+    <button class="close" type="button" aria-label="Close" data-close-modal>&times;</button>
+
+    <h2 id="modal4-title">Agentic AI – Multi-Agent Code Generation System</h2>
+
+    <p>
+      A modular AI system that turns natural language requests into full-stack code (frontend + backend)  
+      using autonomous agents, Retrieval-Augmented Generation (RAG), and validation pipelines.  
+      Built to simulate human-like coordination and intelligent feedback-driven iteration.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🎯 Goal:</strong><br>
+      Convert user prompts into structured, production-grade code using API docs, RAG, and validation —  
+      with a multi-agent architecture that adapts to feedback and evolves through sessions.
+    </p>
+	<br>
+    <p><strong>🧠 Key Agents:</strong></p>
+    <ul>
+      <li><strong>System Orchestrator</strong>: Central controller that delegates tasks to other agents</li>
+      <li><strong>Instruction Parser</strong>: Breaks the prompt into subtasks</li>
+      <li><strong>Retriever (RAG)</strong>: Finds relevant API info from embedded CSV docs using FAISS + metadata</li>
+      <li><strong>Code Generator</strong>: Builds code using subtasks + API docs with GPT-4 or open LLMs</li>
+      <li><strong>Validator</strong>: Checks syntax, linting, API match, and security before delivering code</li>
+      <li><strong>Feedback Agent</strong>: Captures approval or structured user feedback</li>
+      <li><strong>State Manager</strong>: Stores session history, validation status, feedback, and retry count</li>
+    </ul>
+	<br>
+    <p><strong>🔁 Feedback Loop:</strong><br>
+      If user rejects the code or validator fails → system automatically re-prompts using session context,  
+      prior output, and user feedback for accurate regeneration.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>📦 RAG & Embedding Setup:</strong></p>
+    <ul>
+      <li><strong>Embedding Model:</strong> <code>bge-small-en</code> (384-dim)</li>
+      <li><strong>Storage:</strong> FAISS vector DB + metadata dictionary</li>
+      <li><strong>Documents:</strong> API docs parsed from web (via Playwright + BeautifulSoup)</li>
+    </ul>
+	<br>
+    <p><strong>🤖 Code Generation:</strong><br>
+      Supports dev stack choice (e.g., React, Flask, Node), generates both frontend and backend code  
+      using GPT-4 (or Mistral/LLaMA as fallback). Prompts include subtasks, API params, and context from RAG.
+    </p>
+	<br>
+    <p><strong>🧪 Validation Pipeline:</strong><br>
+      Code is passed through syntax checking, linting, API validation, and security scan.  
+      Failed results are captured, feedback is collected, and new prompts are generated iteratively.
+    </p>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>⚙️ Tech Stack:</strong><br>
+      Python, GPT-4, FAISS, Sentence-BERT, Playwright, BeautifulSoup, Mistral, LangChain, Autogen, Pydantic
+    </p>
+
+    <p>
+      The architecture supports real-time agent communication, auto-repair feedback loops,  
+      and scalable task planning — laying the foundation for future multi-agent developer tools.
+    </p>
+
+    <a href="./assets/agentic_code_generator.pdf" target="_blank" rel="noopener">📄 View Architecture PDF</a><br>
+  </div>
+</div>
+
+
+    <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title" hidden>
+  <div class="modal-content">
+    <button class="close" type="button" aria-label="Close" data-close-modal>&times;</button>
+
+    <h2 id="modal2-title">Emotion-Aware Dialogue Generation</h2>
+
+    <p>
+      A research-driven NLP project that brings characters to life using emotionally aware dialogue systems.  
+      It combines deep learning with psychology — modeling how personality, mood, and emotional states evolve across conversations.
+    </p>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🎯 Goal:</strong><br>
+      Predict future emotions in dialogue using the speaker’s personality (OCEAN), mood transitions, and past utterances.  
+      Generate emotionally intelligent and psychologically consistent responses.
+    </p>
+	<br>
+    <p><strong>💡 Motivation:</strong><br>
+      Most chatbots ignore emotional flow and personality. Our system adds both — making responses feel more human, natural, and emotionally coherent.
+    </p>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🧠 Core Techniques:</strong></p>
+    <ul>
+      <li><strong>Emotion Modeling:</strong> Emotions encoded in <em>Valence-Arousal-Dominance (VAD)</em> space.</li>
+      <li><strong>Personality:</strong> Uses the Big Five OCEAN traits, projected into VAD to influence mood shifts.</li>
+      <li><strong>Mood Tracking:</strong> Models evolving emotional state across dialogue turns.</li>
+    </ul>
+	<br>
+    <p><strong>🧪 Models & Experiments:</strong></p>
+    <ul>
+      <li><strong>Multi-Head Attention (VAD-guided)</strong>: Token-level emotional focus</li>
+      <li><strong>Graph Neural Network (GNN)</strong>: Utterance-personality relationships via graph structure</li>
+      <li><strong>HTN + GRU</strong>: Hierarchical transformers + GRU for mood transitions</li>
+      <li><strong>Autoencoder</strong>: Joint emotion + mood reconstruction</li>
+      <li><strong>TCN (Temporal ConvNet)</strong>: Best performer for capturing emotion evolution</li>
+      <li><strong>BERT + BiGRU</strong>: Strong contextual baseline with VAD-personality fusion</li>
+    </ul>
+	 <hr style="margin-top:10px;margin-bottom:10px">
+    <p><strong>📊 Best Performance:</strong><br>
+      <strong>TCN</strong> model achieved:  
+      Micro-F1 = <strong>0.55</strong>, Macro-F1 = <strong>0.43</strong>  
+      Strong per-class F1 on Neutral, Joy, Surprise, Anger  
+      Autoencoder had best results on rare classes like Disgust
+    </p>
+	<br>
+    <p><strong>📚 Dataset:</strong><br>
+      <em>PELD</em> – Personality-Affected Emotion Lines Dataset (from Friends TV show)  
+      6,510 dialogue samples with utterances, emotion labels, and personality profiles (OCEAN)
+    </p>
+
+    <p><strong>🛠 Tech Stack:</strong><br>
+      Python, PyTorch, Transformers, HuggingFace, BERT, GRU, GCN, TCN, FAISS
+    </p>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p>
+      This project combines linguistics, psychology, and AI to model not just <em>what is said</em>, but <em>how it's said and felt</em> — enabling deeper, more believable conversational agents.
+    </p>
+
+    <a href="./assets/Emotionally_Intelligent_Dialogue_Report.pdf" target="_blank" rel="noopener">📄 View Full Report</a>
+    <br>
+    <a href="https://github.com/kanchNaik/emotiondialog_generation" target="_blank" rel="noopener">💻 View Project on GitHub</a>
+  </div>
+</div>
+
+
+    <div id="modal5" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-supportbot-title" hidden>
+  <div class="modal-content">
+    <button class="close" type="button" aria-label="Close" data-close-modal>&times;</button>
+
+    <h2 id="modal-supportbot-title">AI-Powered Customer Support Bot (RAG + FAQ + Tickets)</h2>
+
+    <p>
+      A production-ready support assistant built with Next.js and Supabase. It answers product questions using
+      Retrieval-Augmented Generation (RAG), cites exact FAQs, and—when confidence is low—creates a structured
+      support ticket with an LLM-written summary of the conversation.
+    </p>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🔍 Goal</strong><br>
+      Give users fast, accurate answers from your existing FAQs and streamline hand-off to human support when needed,
+      all on a zero-to-low cost stack suitable for students and early teams.
+    </p>
+
+	<br>
+    <p><strong>✨ What It Does</strong></p>
+    <ul>
+      <li><strong>Chat to Answer:</strong> Users ask questions; the bot finds the best FAQ passages and answers with inline citations like <code>[FAQ-12]</code>.</li>
+      <li><strong>Confidence Guardrails:</strong> If similarity is low, it asks a targeted follow-up instead of guessing.</li>
+      <li><strong>Create Tickets from Chat:</strong> On request (or low confidence), it summarizes the entire conversation (title, steps, environment, FAQ refs) and opens a ticket.</li>
+      <li><strong>Signed-in History:</strong> Logged-in users get a left-sidebar with conversations; the latest opens automatically.</li>
+      <li><strong>Admin-free Seeding:</strong> Seed FAQs from CSV/Hugging Face datasets into Supabase with a one-time API route.</li>
+    </ul>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🧠 Architecture (High-Level Flow)</strong></p>
+    <ul>
+      <li><strong>User UI (Next.js):</strong> Two-pane chat — left: conversations + “New chat”, right: conversation thread.</li>
+      <li><strong>RAG:</strong> Query is embedded → vector similarity in Postgres (pgvector) → top FAQs returned.</li>
+      <li><strong>Answering:</strong> Small LLM (Groq) writes a concise response grounded in the retrieved FAQs; adds <code>[FAQ-id]</code> citations.</li>
+      <li><strong>Ticketing:</strong> If asked (or low confidence), LLM summarizes the <em>entire</em> chat (packed to model context), infers environment (web/iOS/Android/API), extracts FAQ refs, and creates a Supabase ticket.</li>
+      <li><strong>Auth + Data:</strong> Supabase stores users, conversations, messages, FAQs, embeddings, and tickets with RLS on all user data.</li>
+      <li><strong>Deployment:</strong> Vercel (App Router) for serverless API routes and UI; environment variables keep keys secure.</li>
+    </ul>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🗃️ Data & RAG Details</strong></p>
+    <ul>
+      <li><strong>FAQ tables:</strong> <code>faq(id, question, answer)</code>, <code>faq_embeddings(faq_id, embedding vector)</code> with <code>pgvector</code>.</li>
+      <li><strong>Retrieval RPC:</strong> a Postgres function (e.g., <code>match_faq</code>) performs cosine similarity against embeddings and returns <code>{ id, question, answer, similarity }</code>.</li>
+      <li><strong>Guardrails:</strong> thresholds like <code>MIN_SIM</code> and <code>STRONG_SIM</code> prevent hallucinations and control follow-ups.</li>
+      <li><strong>Seeding:</strong> CSV/Hugging Face ingestion endpoint with dedupe via unique index on <code>lower(question)</code>.</li>
+    </ul>
+	<br>
+    <p><strong>🔤 Models</strong></p>
+    <ul>
+      <li><strong>Embeddings:</strong> Hugging Face Inference — <code>BAAI/bge-small-en-v1.5</code> (384-d) via token in env (<code>HF_TOKEN</code>).</li>
+      <li><strong>LLM (answers & tickets):</strong> Groq <code>llama-3.1-8b-instant</code> (<code>GROQ_API_KEY</code>), optimized for low latency and tight budgets.</li>
+      <li><strong>Context Packing:</strong> Entire conversation is loaded; oldest portion is auto-compressed if it would exceed the model’s context window. Recent turns remain verbatim.</li>
+    </ul>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🛡️ Auth, Privacy & Policies</strong></p>
+    <ul>
+      <li><strong>Auth:</strong> Supabase email/password (UI hides magic link/third-party if not enabled).</li>
+      <li><strong>RLS:</strong> Row-Level Security on <code>conversations</code>, <code>messages</code>, and <code>tickets</code> ensures users can only access their own data.</li>
+      <li><strong>Safety:</strong> No free-text hallucinations on low confidence; bot asks a follow-up or escalates.</li>
+    </ul>
+	<br>
+    <p><strong>🧩 API Endpoints</strong></p>
+    <ul>
+      <li><code>POST /api/answer</code> — stateless RAG answer with citations.</li>
+      <li><code>POST /api/chat</code> — stateful chat; persists messages when logged in; can escalate to ticket.</li>
+      <li><code>GET /api/my/conversations</code> — list user conversations (title + last activity).</li>
+      <li><code>GET /api/my/messages?id=…</code> — messages for a conversation.</li>
+      <li><code>GET /api/my/tickets</code> — list current user’s tickets.</li>
+      <li><code>POST /api/seed-faq</code> — seed FAQs (CSV/HF dataset), with optional <code>?force=true</code>.</li>
+    </ul>
+	<br>
+
+    <p><strong>🖥️ UI Highlights</strong></p>
+    <ul>
+      <li>Two-pane layout: sidebar (history + “New chat”) and main chat thread.</li>
+      <li>“Create ticket” button: summarizes the whole chat, attaches FAQ refs, and inserts ticket.</li>
+      <li>Tickets page: list + detail view (title, status, priority, created, summary).</li>
+      <li>Light/Dark theme with improved readability (no white-on-white text).</li>
+    </ul>
+	<br>
+    <p><strong>⚙️ Tech Stack</strong></p>
+    <ul>
+      <li><strong>Frontend / Hosting:</strong> Next.js (App Router), Tailwind, Vercel</li>
+      <li><strong>Backend / DB:</strong> Supabase (Postgres, Auth, RLS, Edge functions optional)</li>
+      <li><strong>Vector Search:</strong> pgvector + SQL RPC</li>
+      <li><strong>LLM / Embeddings:</strong> Groq (Llama-3.1-8b-instant), HF Inference (BGE small)</li>
+      <li><strong>Infra:</strong> Environment variables for keys; serverless API routes</li>
+    </ul>
+
+     <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p><strong>🚀 How to Try</strong></p>
+    <ul>
+      <li>Open the Support page and ask a product question.</li>
+      <li>If the bot isn’t fully confident, it will ask a quick follow-up.</li>
+      <li>Click “Create ticket” to escalate — sign in if prompted.</li>
+      <li>Visit the Tickets page to see your structured summary and status.</li>
+    </ul>
+
+    <hr style="margin-top:10px;margin-bottom:10px">
+
+    <p>
+      Built to be fast, frugal, and practical: accurate answers when possible, and a clean hand-off to humans when not.
+    </p>
+
+    <!-- Replace these with your actual links -->
+    <a href="https://aipoweredcustomersupportbot.vercel.app/support" target="_blank" rel="noopener">🟢 Live Demo</a><br>
+    <a href="https://github.com/kanchNaik/ai_powered_customersupport_bot" target="_blank" rel="noopener">💻 GitHub Repository</a><br>
+    <a href="./assets/AI_SupportBot_Report.pdf" target="_blank" rel="noopener">📄 Project Report (PDF)</a>
+  </div>
+</div>
+
+  </section>
+  <!-- Medium blogs -->
+<!-- Blog / Medium -->
+<section id="blog" aria-label="Latest writing">
+  <p class="section__text__p1">Latest on Medium</p>
+  <h1 class="title">Blog</h1>
+
+  <div class="blog-carousel">
+    <button class="blog-nav blog-nav--prev" type="button" aria-label="Scroll left">‹</button>
+
+    <div class="blog-track" tabindex="0" aria-label="Blog posts" role="list">
+      <!-- Card 1 -->
+      <article class="blog-card" role="listitem">
+        <a class="blog-card__link" href="https://medium.com/@kanchannaik55/how-i-shipped-a-support-chatbot-that-answers-first-asks-smartly-and-escalates-cleanly-27afe9bbeefa" target="_blank" rel="noopener">
+          <div class="blog-card__thumb" style="--thumb:url('./assets/chatbotImage.jpeg');"></div>
+          <div class="blog-card__body">
+            <h3 class="blog-card__title">How I Built an LLM-Powered Support ChatBot</h3>
+            <p class="blog-card__excerpt">How I built a support chatbot that answers confidently when it knows, asks once when unsure, and hands things off cleanly when needed.</p>
+            <div class="blog-card__meta">
+             5 min read
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="blog-card" role="listitem">
+        <a class="blog-card__link" href="https://medium.com/@kanchannaik55/what-is-ai-narrow-ai-vs-general-ai-4848cbd842b5" target="_blank" rel="noopener">
+          <div class="blog-card__thumb" style="--thumb:url('./assets/genainarrowai.png');"></div>
+          <div class="blog-card__body">
+            <h3 class="blog-card__title">What is AI? Narrow AI vs General AI</h3>
+            <p class="blog-card__excerpt">Explore how AI today powers your playlists and maps with narrow focus—and why true general AI that thinks like us is still a future frontier.</p>
+            <div class="blog-card__meta">
+              5 min read
+            </div>
+          </div>
+        </a>
+      </article>
+	  
+	  <!-- Card 3 -->
+      <article class="blog-card" role="listitem">
+        <a class="blog-card__link" href="https://medium.com/@kanchannaik55/understanding-personalized-pagerank-a-guide-to-node-relevance-in-graph-networks-d53964a0082e" target="_blank" rel="noopener">
+          <div class="blog-card__thumb" style="--thumb:url('./assets/pagerankblog.png');"></div>
+          <div class="blog-card__body">
+            <h3 class="blog-card__title">Understanding Personalized Page Rank</h3>
+            <p class="blog-card__excerpt">Dive into how Personalized PageRank powers relevance in graph networks—ranking nodes by their proximity and impact instead of just global popularity.</p>
+            <div class="blog-card__meta">
+              4 min read
+            </div>
+          </div>
+        </a>
+      </article>
+	  <!-- Card 4 -->
+      <article class="blog-card" role="listitem">
+        <a class="blog-card__link" href="https://medium.com/@kanchannaik55/leveraging-snowflake-to-analyze-global-development-trends-from-world-bank-data-80c92390ab05" target="_blank" rel="noopener">
+          <div class="blog-card__thumb" style="--thumb:url('./assets/snowflakeblog.png');"></div>
+          <div class="blog-card__body">
+            <h3 class="blog-card__title">Leveraging Snowflake to Analyze Global Development Trends from World Bank Data</h3>
+            <p class="blog-card__excerpt">See how I used Snowflake to ingest and analyze World Bank global development data—transforming raw indicators into insights on poverty trends and country performance.</p>
+            <div class="blog-card__meta">
+              4 min read
+            </div>
+          </div>
+        </a>
+      </article>
     </div>
 
+    <button class="blog-nav blog-nav--next" type="button" aria-label="Scroll right">›</button>
+  </div>
 
-    <div id="modal4" class="modal"> 
-        <div class="modal-content">
-    <span class="close" onclick="closeModal('modal4')">&times;</span>
-    <h2>Emotionally Intelligent Dialogue System</h2>  
-    <p>A deep learning framework for personality-aware, emotionally intelligent dialogue generation.  
-       Built on the PELD dataset (derived from <em>Friends</em> scripts), the system integrates emotion dynamics (VAD),  
-       personality traits (OCEAN), and mood transitions to generate contextually and emotionally coherent AI responses.
-    </p> 
-    <br>
-    <ul> 
-        <li><strong>Overview:</strong> Personality-conditioned emotion prediction using Valence–Arousal–Dominance (VAD) vectors instead of categorical labels.</li> 
-        <li><strong>Techniques:</strong> BERT embeddings, Mood Transition Modeling, OCEAN-to-VAD projection, Multi-head Affective Attention, Graph Neural Networks.</li> 
-        <li><strong>Experiments:</strong> Benchmarked 6 models — HTN+GRU, TCN, BERT+BiGRU, GNN, Autoencoder, Multi-head Attention.</li> 
-        <li><strong>Performance:</strong> Temporal Convolutional Network (TCN) achieved Macro-F1 = 0.43, Micro-F1 = 0.55,  
-            outperforming baseline Macro-F1 = 0.33; notable improvements in rare emotions like Disgust and Surprise.</li>
-        <li><strong>Dataset:</strong> PELD (6,510 samples) — dialogue triples annotated with OCEAN traits and mapped to VAD emotion vectors.</li>
-        <li><strong>Key Features:</strong> Personality-conditioned mood transitions, rare-emotion classification gains, psychologically grounded affective modeling.</li>
-        <li><strong>Future Work:</strong> Multimodal expansion (speech, facial cues), explainable mood trajectories, deployment in interactive systems.</li>
-    </ul> 
-    <a href="./assets/Emotionally_Intelligent_Dialogue_Report.pdf" target="_blank">📄 View Full Report</a> 
-</div>
-
-    </div>
-
-     <!--Modal for Project 5 --> 
-     <!-- <div id="modal5" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" onclick="closeModal('modal5')">&times;</span> 
-            <h2>Ride Management System – Uber Simulation</h2> 
-            <p> A full-stack distributed ride management system inspired by Uber. 
-                Built using microservices architecture with integrated ML-based dynamic pricing, real-time notifications, and secure admin monitoring. 
-            </p> 
-            <br>
-            <ul> 
-                <li><strong>Frontend:</strong> ReactJS dashboards for customer, driver, and admin roles</li> 
-                <li><strong>Backend:</strong> Django REST microservices containerized with Docker & orchestrated with Kubernetes</li> 
-                <li><strong>ML Integration:</strong> XGBoost model for dynamic fare prediction (R² = 0.79)</li> 
-                <li><strong>Real-Time Communication:</strong> Redis-backed WebSocket for booking status, driver availability</li> 
-                <li><strong>Event Streaming:</strong> Kafka used for messaging across services (ride events, location updates)</li> 
-                <li><strong>Caching:</strong> Redis used for driver location and session caching to reduce DB load</li> 
-                <li><strong>Testing:</strong> JMeter used for performance testing (100 concurrent users simulated)</li> 
-                <li><strong>Deployment:</strong> Hosted on AWS EKS with persistent MySQL, Redis, and media storage</li> 
-            </ul> 
-            <a href="./assets/ride_management_project_report.pdf" target="_blank">📄 View Final Report (PDF)</a> 
-        </div> 
-    </div> -->
-
-
-    <!-- Modal for Project 6 --> 
-     <!-- <div id="modal6" class="modal"> 
-        <div class="modal-content"> 
-            <span class="close" onclick="closeModal('modal6')">&times;</span> 
-            <h2>Sentiment Classification & Medical Image Generation</h2> 
-            <p>This project explores two real-world deep learning applications — sentiment classification using NLP techniques and synthetic medical image generation using GANs.</p> 
-            <ul> 
-                <li><strong>Part 1 – IMDb Sentiment Classification:</strong></li> 
-                <ul> 
-                    <li>Dataset: IMDb Movie Reviews</li> 
-                    <li>Text Preprocessing: Tokenization, stopword removal, lemmatization, HTML stripping</li> 
-                    <li>Embedding: Word2Vec</li> <li>Models: RNN, GRU, LSTM, BiLSTM</li> 
-                    <li><strong>Best Result:</strong> BiLSTM + Word2Vec → 71.5% Accuracy in 9 epochs</li> 
-                </ul> 
-                <li><strong>Part 2 – DCGAN on PathMNIST:</strong></li> 
-                <ul> 
-                    <li>Dataset: PathMNIST (MedMNIST series)</li> 
-                    <li>Architecture: DCGAN with custom generator and discriminator using CNN layers</li> 
-                    <li>Evaluation: FID score tracked every 100 epochs → Best FID: 187.17 at epoch 300</li> 
-                    <li>Challenge: Mode collapse identified via loss curves and image repetition patterns</li> 
-                    <li><strong>Final FID Score:</strong> 220.91 after 1000 epochs</li> 
-                </ul> 
-                <li><strong>Technologies:</strong> Python, PyTorch, Word2Vec, RNN variants, DCGAN</li> 
-            </ul> 
-            <a href="./assets/Results.pdf" target="_blank">📄 View Full Report (PDF)</a> 
-        </div> 
-    </div> --> 
-
-    <!-- Repeat for modal2, modal3, modal4 -->
+  <div class="blog-cta">
+    <a class="btn btn-outline" href="https://medium.com/@kanchannaik55" target="_blank" rel="noopener">
+      View all on Medium
+    </a>
+  </div>
 </section>
 
-<section id="contact">
+  <!-- Contact -->
+  <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
+
     <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-            <img src="assets/email.png" 
-            alt="Email Icon"
-            class="icon contact-icon email-icon"/>
-            <p><a href="mailto:kanchannaik55@gmail.com">kanchannaik55@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-            <img src="assets/email.png" 
-            alt="Email Icon"
-            class="icon contact-icon email-icon"/>
-            <p><a href="mailto:kanchanashok.naik@sjsu.edu">kanchanashok.naik@sjsu.edu</a></p>
-        </div>
+      <div class="contact-info-container">
+        <img src="assets/email.png" alt="" class="icon contact-icon email-icon" loading="lazy" decoding="async" />
+        <p><a href="mailto:kanchannaik55@gmail.com">kanchannaik55@gmail.com</a></p>
+      </div>
 
-        <div class="contact-info-container">
-            <img src="assets/linkedin.png" 
-            alt="Linkedin Icon"
-            class="icon contact-icon"/>
-            <p><a href="https://www.linkedin.com/in/kanchan-ashok-naik/">Linkedin</a></p>
-        </div>
+      <div class="contact-info-container">
+        <img src="assets/email.png" alt="" class="icon contact-icon email-icon" loading="lazy" decoding="async" />
+        <p><a href="mailto:kanchanashok.naik@sjsu.edu">kanchanashok.naik@sjsu.edu</a></p>
+      </div>
 
-        <!-- Phone Contact --> 
-         <div class="contact-info-container"> 
-            <img src="assets/phone.png" alt="Phone Icon" class="icon contact-icon"/> 
-            <p><a href="tel:+14086904186">+1 (408) 690-4186</a></p> 
-        </div>
+      <div class="contact-info-container">
+        <img src="assets/linkedin.png" alt="" class="icon contact-icon" loading="lazy" decoding="async" />
+        <p><a href="https://www.linkedin.com/in/kanchan-ashok-naik/">LinkedIn</a></p>
+      </div>
 
+      <div class="contact-info-container">
+        <img src="assets/phone.png" alt="" class="icon contact-icon" loading="lazy" decoding="async" />
+        <p><a href="tel:+14086904186">+1 (408) 690-4186</a></p>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer>
-    <nav>
-        <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+  <!-- Footer -->
+  <footer>
+    <nav aria-label="Footer">
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
     <p>Copyright &#169; 2025 Kanchan Naik. All Rights Reserved.</p>
-</footer>
+  </footer>
 
-    <script src="script.js"></script>
-    
+  <script src="script.js"></script>
 </body>
 </html>
